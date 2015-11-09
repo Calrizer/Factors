@@ -9,6 +9,7 @@ begin
 
     clrscr;
     
+    TextColor(White);
     writeln('Enter a number to find the factors...');
     writeln;
     
@@ -27,11 +28,11 @@ begin
     
     write('Factors of ', num, '... ');
     
-    for x := 1 to num do
+    for x := 1 to num do {Iterates from 1 to the inputted number.}
     begin
-        if num mod x = 0 then 
+        if num mod x = 0 then {Returns true when the remaider of num and x is 0.}
         begin
-            write(' ', x, ' ');
+            write(' ', x, ' '); 
             count := count + 1;
         end;
     end;
@@ -39,7 +40,7 @@ begin
     writeln;
     writeln;
 
-    if count = 2 then
+    if count = 2 then {Returns true when there are two factors.}
     begin
         writeln(num,' is a prime number.');
     end;
